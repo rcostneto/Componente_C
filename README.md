@@ -69,8 +69,10 @@ $ docker build -t rest-c .
 Para executar o container basta executar, **como administrador**, expecificando o nome e a rede.
 
 ```
-$ docker run -d -p 8000:8000 --name peca --network oficina -v /c/Users/RCNeto/Desktop/mvp_desenvolvimento_backend_avancado/rest_api_suprimentos_c/database:/app/database rest-c
->>>>>>obs: o comando anterior se refere ao mapeamento com o docker da pasta database que esta na maquina local(area de trabalho), para que a imagem que esta no docker com o banco db.sqlite3 consiga atualizar o mesmo banco na maquina local.
+$ docker run -d -p 8000:8000 --name peca --network oficina -v /C/Users/RCNeto/Desktop/Componente_C-main/database:/app/database rest-c
+
+>>>>>>obs: O caminho da linha 72, foi configurado para o Desktop da minha maquina, nesse caso sera necessario alterar o esse caminho(/C/Users/RCNeto/Desktop/Componente_C-main/database) bastando clicar com o botao direito do mouse na pasta database do projeto e copiar o
+caminho ou copy path e substituir na respectiva linha. Esses dados irao para a API principal Componente_A quando fizer a chamada de por la.
 ```
 ---
 ### Alguns comandos úteis do Docker
